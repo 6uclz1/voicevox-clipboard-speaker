@@ -1,3 +1,7 @@
+# system
+import sys
+import signal
+
 # pip
 import pyperclip
 from ulid import ULID
@@ -6,6 +10,12 @@ from ulid import ULID
 from synthesis import synthesis
 from play_voice import play_voice
 from split_text import split_text
+
+def signal_handler(sig, frame):
+    print('中断されました')
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, signal_handler)
 
 def main():
     last_content = pyperclip.paste()
