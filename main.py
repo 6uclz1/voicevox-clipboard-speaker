@@ -7,9 +7,9 @@ import pyperclip
 from ulid import ULID
 
 # local module
-from synthesis import synthesis
-from play_voice import play_voice
-from split_text import split_text
+from src.synthesis import synthesis
+from src.play_voice import play_voice
+from src.split_text import split_text
 
 def signal_handler(sig, frame):
     print('中断されました')
