@@ -1,7 +1,7 @@
 # voicevox-clipboard-speaker
 
 ## Require
-- See `requrement.txt`
+- See `requirements.txt`
 - Install VOICEVOX (https://voicevox.hiroshiba.jp) 
 - Running VOICEVOX (Check open `localhost:50021`)
 
