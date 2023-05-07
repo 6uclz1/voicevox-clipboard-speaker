@@ -7,13 +7,13 @@ def synthesis(text, filename, speaker=14):
     
     # 音声合成用のクエリを作成する
     audio_query_response = requests.post(
-        "http://localhost:50021/audio_query",
+        "http://127.0.0.1:50021/audio_query",
         params={"text": 'えっと、' + text, "speaker": speaker}
     )
 
     # 音声合成する
     synth_payload_response = requests.post(
-        "http://localhost:50021/synthesis",
+        "http://127.0.0.1:50021/synthesis",
         params={"speaker": speaker},
         data=json.dumps(audio_query_response.json())
     )
